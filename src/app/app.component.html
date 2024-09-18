@@ -1,0 +1,22 @@
+<div class="container">
+  <div class="row"></div>
+</div>
+<div>
+  <h1>Hola W0rld</h1>
+</div>
+<div>
+  {{title}}
+  la suma de 2 + 2 es: {{2+2}} <br>
+  la suma de de 3 + 3 es: {{duplicarNumero(3)}}
+</div>
+<div>
+  <h2>Matricula: {{alumno.matricula}}</h2>
+  <h2>Nombre: {{alumno.nombre | uppercase}}</h2>
+  <h2>Fecha: {{alumno.fechaIncrito | date:"dd-MM-yy"}}</h2>
+  <h2>Pago: {{alumno.pago | currency}}</h2>
+  <hr>
+  <app-product-list></app-product-list>
+</div>
+
+
+
