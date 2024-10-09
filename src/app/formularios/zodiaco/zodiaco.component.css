@@ -1,0 +1,93 @@
+/* Contenedor principal para el formulario y el resultado */
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 80%;  /* Ajusta el ancho de la página */
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Estilos para el contenedor del formulario */
+.form-container {
+  width: 45%;  /* Ajusta el ancho del formulario */
+  padding: 20px;
+  border: 1px solid #000; /* Borde negro */
+  border-radius: 10px;
+}
+
+/* Estilos generales del formulario */
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input[type="text"], input[type="number"] {
+  width: 100%;
+  padding: 5px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+input[type="radio"] {
+  margin-right: 5px;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  background-color: #4CAF50;
+  color: white;
+  border: 2px solid #000;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+/* Estilos para el contenedor del resultado */
+.resultado {
+  width: 45%;  /* Ajusta el ancho de la caja de resultados */
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+  text-align: left;
+}
+
+/* Estilos para los párrafos de resultado */
+.resultado p {
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+.resultado strong {
+  font-style: italic;
+  font-weight: bold;
+}
+
+/* Estilos para la imagen */
+.resultado img {
+  display: block;
+  margin: 20px 0;
+  width: 100px;  /* Tamaño de la imagen */
+  height: 100px;
+  object-fit: contain;  /* Mantiene las proporciones */
+}
+
+/* Centra el formulario y el resultado en la pantalla */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .form-container, .resultado {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}

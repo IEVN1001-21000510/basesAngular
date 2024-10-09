@@ -1,0 +1,31 @@
+<div class="container">
+  <div class="form-container">
+    <form [formGroup]="zodiacoFormulario">
+
+      <label for="nombre">Nombre:</label>
+      <input id="nombre" formControlName="nombre" type="text" placeholder="Ingresa tu nombre">
+
+      <label for="dia">Día de Nacimiento:</label>
+      <input id="dia" formControlName="dia" type="number" placeholder="Día">
+
+      <label for="mes">Mes de Nacimiento:</label>
+      <input id="mes" formControlName="mes" type="number" placeholder="Mes">
+
+      <label for="anio">Año de Nacimiento:</label>
+      <input id="anio" formControlName="anio" type="number" placeholder="Año">
+
+      <label>Sexo:</label>
+      <input type="radio" formControlName="sexo" value="masculino"> Masculino
+      <input type="radio" formControlName="sexo" value="femenino"> Femenino
+
+      <button type="button" (click)="calcularSigno()">Descubre tu Signo</button>
+    </form>
+  </div>
+
+  <div *ngIf="edad !== null && signo !== null" class="resultado">
+    <p>Nombre: {{ zodiacoFormulario.get('nombre')?.value }}</p>
+    <p>Edad: {{ edad }} años</p>
+    <p>Signo del Zodiaco Chino: {{ signo }}</p>
+    <img *ngIf="imagenSigno" [src]="imagenSigno" alt="Imagen del signo {{ signo }}">
+  </div>
+</div>
